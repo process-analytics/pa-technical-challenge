@@ -1,0 +1,30 @@
+{
+  "name": "ts-rollup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "module": "dist/index.esm.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "rollup -c",
+    "watch": "rollup -cw --silent --environment watchMode:true",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^11.2.1",
+    "@typed-mxgraph/typed-mxgraph": "^1.0.1",
+    "rollup": "^2.45.2",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-copy-watch": "^0.0.1",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-serve": "^1.1.0",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "mxgraph": "^4.2.2"
+  }
+}
