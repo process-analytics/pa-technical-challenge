@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
-    "target": "ESNEXT",
-    "module": "ESNEXT",
+    "outDir": "./build/lib",
+    "target": "ESNext",
+    "module": "ESNext",
     "strict": true,
     "moduleResolution": "node",
     "typeRoots": [

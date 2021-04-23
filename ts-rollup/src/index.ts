@@ -1,3 +1,3 @@
-import {startBingoApp} from './app'
+import { startBingoApp } from './app';
 
 startBingoApp();

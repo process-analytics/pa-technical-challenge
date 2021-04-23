@@ -1,4 +1,4 @@
-import factory, {mxGraphExportObject} from 'mxgraph';
+import factory, { mxGraphExportObject } from 'mxgraph';
 
 export const mxgraph = initialize();
 
