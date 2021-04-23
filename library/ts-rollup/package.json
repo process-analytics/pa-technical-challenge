@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "all": "run-s clean lint build test",
-    "clean": "rimraf dist",
+    "clean": "rimraf build dist",
     "build": "rollup -c",
     "lint": "eslint \"*/**/*.{js,ts,tsx}\" --max-warnings 0 --fix",
     "watch": "rollup -cw --silent --environment watchMode:true",
