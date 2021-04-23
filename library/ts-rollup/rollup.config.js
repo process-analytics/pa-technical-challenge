@@ -8,36 +8,46 @@ import resolve from '@rollup/plugin-node-resolve';
 import pkg from './package.json';
 
 const watchMode = process.env.watchMode;
+let input = 'src/index.ts';
+let outputFile = pkg.module;
 
 const plugins = [
   typescript({
     typescript: require('typescript'),
+    lib: ['ESNext', 'dom'],
+    target: 'ESNext',
+    include: !watchMode ? ['src/**/*'] : ['src/**/*', 'dev/**/*'],
   }),
   resolve(),
   commonjs(),
 ];
 
 if (watchMode) {
-  const copyTargets = [];
-  copyTargets.push({ src: 'src/*.html', dest: 'dist/' });
-  copyTargets.push({ src: 'src/static', dest: 'dist' });
-  plugins.push(copyWatch({
-    watch: ['src/static/**', 'src/*.html'],
-    targets: copyTargets,
-  }));
+  input = 'dev/index.ts';
+  outputFile = 'build/dev/index.esm.js';
 
-  plugins.push(serve({ contentBase: 'dist', port: 10001 }));
-  plugins.push(livereload({ watch: 'dist', verbose: true }));
+  const copyTargets = [];
+  copyTargets.push({ src: 'dev/*.html', dest: 'build/dev' });
+  copyTargets.push({ src: 'dev/static', dest: 'build/dev' });
+  plugins.push(
+    copyWatch({
+      watch: ['dev/static/**', 'dev/*.html'],
+      targets: copyTargets,
+    }),
+  );
+
+  plugins.push(serve({ contentBase: 'build/dev', port: 10001 }));
+  plugins.push(livereload({ watch: 'build/dev', verbose: true }));
 }
 
 export default [
   {
-    input: 'src/index.ts',
+    input,
     output: [
       {
-        file: pkg.module,
+        file: outputFile,
         format: 'es',
-        sourcemap: true,
+        sourcemap: !watchMode,
       },
     ],
     plugins: plugins,

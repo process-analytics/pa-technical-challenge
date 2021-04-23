@@ -3,6 +3,10 @@
     "outDir": "./build/lib",
     "target": "ESNext",
     "module": "ESNext",
+    "lib": [
+      "ESNext",
+      "dom"
+    ],
     "strict": true,
     "moduleResolution": "node",
     "typeRoots": [
@@ -12,5 +16,5 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
-  }
+  },
 }

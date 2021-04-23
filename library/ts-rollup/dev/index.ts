@@ -1,6 +1,6 @@
-import { initializeBingo } from '../lib';
+import { initializeBingo } from '../src';
 
-export function startBingoApp(): void {
+function startBingoApp(): void {
   const container = document.getElementById('bingo-container');
   if (container) {
     initializeBingo(container);
@@ -8,3 +8,5 @@ export function startBingoApp(): void {
     alert('Container must be provided');
   }
 }
+
+startBingoApp();
