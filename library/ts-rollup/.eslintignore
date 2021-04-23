@@ -1,6 +1,7 @@
 .github/
 .idea/
 build/
+doc/
 dist/
 node_modules/
 .eslintrc.js
