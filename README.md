@@ -29,17 +29,23 @@ You can use the IDE and the test tools that you want, but you need to provide th
 - Add a new api method that generates & displays a new grid with random numbers on each square. \
   It should be called with: `<library object>.generateNewGrid(htmlContainerWhereDisplayTheGrid);` \
   The result should be something like this:
-  ![grid.png](./images/grid.png)
+  <p align="center">
+    <img title="Grid" src="images/grid.png">
+  </p>
   
 - Add a new api method that adds a new token on a square. \
   It should be called with: `<library object>.addNewToken(“23”);` \
   The result should be something like this:
-  ![token.png](./images/token.png)
+  <p align="center">
+    <img title="Token" src="images/token.png">
+  </p>
 
 - Add a new api method that updates the background color of a square, without redrawing all the grid. \
   It should be called with: `<library object>.updateBackgroundColor(“16”, “Pink”);` \
   The result should be something like this:
-  ![background-color.png](./images/background-color.png)
+  <p align="center">
+    <img title="Background color" src="images/background-color.png">
+  </p>
 
 - Add a new api method that adds a handler on click on square. \
   It should be called with: `<library object>.addHandler(squareLabel, (event) => {....});`
@@ -80,7 +86,9 @@ Use the previous library to demonstrate the rendering of all its functionalities
 - Add an interaction: When the user clicks on a square, a new jeton must appear on it.
 - Add an interaction: When the user clicks on a square and the row is completed, the color of the background of the whole row must be changed.
 - Add an interaction: When the user clicks on a square and the column is completed, the color of the background of the whole column must be changed.
-  ![column.png](./images/column.png)
+  <p align="center">
+    <img title="Column" src="images/column.png">
+  </p>
 - Add an interaction: When the user clicks on a square and the whole grid is completed, add the interaction that you want to congratulate the user.
 
 As a member of the team, we let you decide the level of completion you think is necessary to promote the library.
