@@ -24,6 +24,9 @@ If you are more comfortable with another build/test tool, you are free to create
 You can use the IDE and the test tools that you want, but you need to provide the information necessary to install your project, to build & to test the library.
 
 #### What already exists
+To see what it's already configured, go to the readme of each environment:
+- [TypeScript + Rollup](./library/ts-rollup/README.md)
+- [ES + Webpack](./library/es-webpack/README.md)
 
 #### What to do
 - Add a new api method that generates & displays a new grid with random numbers on each square. \
