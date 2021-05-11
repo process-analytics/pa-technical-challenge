@@ -1,12 +1,12 @@
 module.exports = {
   rootDir: '../..',
   roots: ['./test/unit', './src'],
-  testMatch: ['**/?(*.)+(spec|test).[t]s'],
+  testMatch: ['**/?(*.)+(spec|test).js'],
   testPathIgnorePatterns: ['/node_modules/', 'dist', 'src'],
   transform: {
     '^.+\\.ts?$': 'ts-jest',
   },
-  collectCoverageFrom: ['**/*.{ts,js}'],
+  collectCoverageFrom: ['**/*.{js}'],
   coveragePathIgnorePatterns: [
     '/node_modules/',
     'dist',

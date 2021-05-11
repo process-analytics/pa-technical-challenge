@@ -4,13 +4,10 @@ module.exports = {
   rootDir: '../..',
   roots: ['./test/e2e', './src'],
   preset: 'jest-playwright-preset',
-  testMatch: ['**/?(*.)+(spec|test).[t]s'],
+  testMatch: ['**/?(*.)+(spec|test).js'],
   testPathIgnorePatterns: ['/node_modules/', 'dist', 'src'],
   testTimeout: 200000,
-  transform: {
-    '^.+\\.ts?$': 'ts-jest',
-  },
-  collectCoverageFrom: ['**/*.{ts,js}'],
+  collectCoverageFrom: ['**/*.{js}'],
   coveragePathIgnorePatterns: [
     '/node_modules/',
     'dist',
