@@ -105,10 +105,9 @@ Use the previous library to demonstrate the rendering of all its functionalities
 
 - Display a new grid with random numbers on each square
 - Add an interaction: When the user clicks on a square, a new token must appear on it.
-- Add an interaction: When the user clicks on a square and the row is completed, the color of the background of the whole row must be changed. \
-  Add the interaction that you want to congratulate the user.
-- Add an interaction: When the user clicks on a square and the column is completed, the color of the background of the whole column must be changed. \
-  Add the interaction that you want to congratulate the user.
+- Add an interaction: When the user clicks on a square and the row is completed, the color of the background of the whole row must be changed.
+- Add an interaction: When the user clicks on a square and the column is completed, the color of the background of the whole column must be changed.
+- When the user wins: implement whatever you want to let him/her know he has just won (congratulations are welcome).
   <p align="center">
     <img title="Column" src="images/column.png">
   </p>
