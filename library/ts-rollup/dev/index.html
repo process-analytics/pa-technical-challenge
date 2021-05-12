@@ -10,12 +10,18 @@
     <h2>Fun starts here</h2>
 </header>
 
-<section>
-    <!-- container used to display the BINGO -->
-    <div id="bingo-container"></div>
+<section class="flex-column-container">
+    <div>
+        <div id="controls-panel">
+            <input id="btn-new-grid" type="button" title="Generate new Grid" value="New Grid" class="button"/>
+        </div>
+
+        <!-- container used to display the BINGO -->
+        <div id="bingo-container"></div>
+    </div>
 </section>
 
 <!-- load demo -->
-<script src="index.esm.js" type="module"></script>
+<script src="bingo-generator.esm.js" type="module"></script>
 </body>
 </html>
