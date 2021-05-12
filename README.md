@@ -60,13 +60,6 @@ If it's necessary (because the exercise is too long), no need to implement all t
     <img title="Token" src="images/token.png">
   </p>
 
-- Add a new api method that updates the background color of a square, without redrawing all the grid. \
-  It should be called with: `<library object>.updateBackgroundColor(“16”, “Pink”);` \
-  The result should be something like this:
-  <p align="center">
-    <img title="Background color" src="images/background-color.png">
-  </p>
-
 - Add a new api method that adds a handler on click on square. \
   It should be called with: `<library object>.addHandler(squareLabel, (event) => {....});`
   

@@ -22,6 +22,15 @@ The result should be something like this:
     <img title="Grid" src="../../images/grid.png">
   </p>
 
+### Update the background color of a square, without redrawing all the grid
+```javascript
+    bingo.updateBackgroundColor('36', 'Pink');
+```
+The result should be something like this:
+  <p align="center">
+    <img title="Grid" src="../../images/background-color.png">
+  </p>
+
 ## Technical part
 
 The project is configured with Jest for the tests, Playwright & Jest-image-snapshot for the visual tests, ESLint for the code formatting.
