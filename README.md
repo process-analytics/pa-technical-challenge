@@ -50,6 +50,8 @@ To see what it's already configured, go to the readme of each environment:
 - [TypeScript + Rollup](./library/ts-rollup/README.md)
 - [ES + Webpack](./library/es-webpack/README.md)
 
+**Note**: The environments have been tested with NodeJS 12 and npm 6.
+
 #### What to do
 If it's necessary (because the exercise is too long), no need to implement all the rules (management of duplicates for random numbers, all winning combinations). Make it as simple as possible.
 
@@ -70,16 +72,10 @@ If it's necessary (because the exercise is too long), no need to implement all t
 - Add a new api method that adds a handler on click on square. \
   It should be called with: `<library object>.addHandler(squareLabel, (event) => {....});`
   
-- Add a new api method that returns the label of the squares with no token on the same row of a specific square. \
-  It should be called with: `<library object>.getLabelsWithNoTokenOnSameRow(squareLabel);` \
-  The result should be something like this: `[5, 8, 3]` or `[]`
-
-- Add a new api method that returns the label of the squares with no token on the same column of a specific square. \
-  It should be called with: `<library object>.getLabelsWithNoTokenOnSameColumn(squareLabel);` \
-  The result should be something like this: `[7, 2, 4]` or `[]`
+- Add one or several new api methods that let know if a line or a column is completed. The number of the squares that are
+in the row or in the column should be returned for a latter use. \
+  For more details about how the api will be used, see the Demonstrator request below.
   
-- **Bonus**: \
-  At the initialization of the library, load the MxGraph model dynamically, like done in this [example](https://jgraph.github.io/mxgraph/javascript/examples/dynamicloading.html).
 
 #### References
 - npm package of MxGraph: https://www.npmjs.com/package/mxgraph
@@ -92,7 +88,7 @@ If it's necessary (because the exercise is too long), no need to implement all t
 #### Requirements
 We initialize the folder [demonstrator](./demonstrator), but it's empty.
 
-There is no specific requirement for the demonstrator. \
+There is no specific requirement nor technical restriction for the demonstrator. \
 It can be :
 - a HTML page
 - a mini application
