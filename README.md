@@ -11,7 +11,9 @@ Your mission, if you accept it, is to create a new library, and a demonstrator o
 
 As a member of the team, we let you decide the level of completion you think is necessary to promote the library.
 
-✨ Please share your code via GitHub.
+✨ Please share your code via GitHub:
+- create a **private** repository from the [template](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) providing by the `pa-technical-challenge` repository.
+- let the Process Analytics core team (@aibcmars @csouchet @tbouffard) access to it when you have completed the challenge
 
 ## Bingo rules
 ### Presentation of the game
