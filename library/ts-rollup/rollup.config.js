@@ -29,7 +29,7 @@ const plugins = [
 
 if (watchMode) {
   input = 'dev/index.ts';
-  outputFile = 'build/dev/index.esm.js';
+  outputFile = 'build/dev/bingo-generator.esm.js';
 
   const copyTargets = [];
   copyTargets.push({ src: 'dev/*.html', dest: 'build/dev' });
