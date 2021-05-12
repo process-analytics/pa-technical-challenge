@@ -24,3 +24,8 @@ updateBackground.onchange = () => {
   bingo.updateBackgroundColor(updateBackground.value, 'Pink');
   updateBackground.value = ''; // reset
 };
+
+// register handler on grid
+bingo.registerHandler(cell => {
+  alert(`You click on square ${cell.value}`);
+});
