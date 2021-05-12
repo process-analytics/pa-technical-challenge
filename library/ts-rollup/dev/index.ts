@@ -12,5 +12,5 @@ function startBingoApp(): Bingo {
 const bingo = startBingoApp();
 
 document.getElementById('btn-new-grid').addEventListener('click', () => {
-  bingo.initializeGrid();
+  bingo.resetGrid();
 });

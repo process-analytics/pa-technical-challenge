@@ -20,7 +20,7 @@ export class Grid {
     this.graph = new BingoGraph(document.getElementById(container));
   }
 
-  initializeGrid(): void {
+  resetGrid(): void {
     // Clear the whole grid for a full reset
     this.graph.getModel().clear();
 

@@ -15,7 +15,7 @@ The production bundle is available as [ESM bundle](./dist/bingo-generator.esm.js
 
 ### Generate a new grid with random numbers on each square
 ```javascript
-    bingo.initializeGrid();
+    bingo.resetGrid();
 ```
 The result should be something like this:
   <p align="center">

@@ -7,7 +7,7 @@ export class Bingo {
     this.grid = new Grid(container);
   }
 
-  initializeGrid(): void {
-    this.grid.initializeGrid();
+  resetGrid(): void {
+    this.grid.resetGrid();
   }
 }
