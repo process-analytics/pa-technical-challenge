@@ -81,7 +81,7 @@ If it's necessary (because the exercise is too long), no need to implement all t
   
 - Add one or several new api methods that let know if a line or a column is completed. The number of the squares that are
 in the row or in the column should be returned for a latter use. \
-  For more details about how the api will be used, see the Demonstrator request below
+  For more details about how the api will be used, see the Demonstrator request below.
   
 
 #### References
