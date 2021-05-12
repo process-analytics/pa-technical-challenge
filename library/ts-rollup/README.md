@@ -2,15 +2,22 @@
 
 The project is configured with Jest for the tests, Playwright & Jest-image-snapshot for the visual tests, ESLint for the code formatting.
 
-## IDE Configuration
+## IDE Configuration Tips
 
-### IntelliJ
+### IntelliJ/WebStorm
 If you have a problem with IntelliJ, try to change the configuration of ESLint in the IntelliJ preferences, like:
 ![eslint-config.png](../../images/ts-rollup-eslint-config.png)
 
 ## Commands
-### Build the _production_ bundle
-`npm run build`
+
+### Build and start a development server
+`npm run watch`
+
+A server is launched with an HTML page to test the library manually: http://localhost:10001. \
+Livereload/watch is enabled. \
+You should have the following rendering:
+
+![Grid](../../images/start_library_rendering.png)
 
 ### Format the code
 `npm run lint`
@@ -37,11 +44,7 @@ If you have a problem with IntelliJ, try to change the configuration of ESLint i
 ### All the previous commands
 `npm run all`
 
-### Build the _development_ bundle
-`npm run watch`
+### Build the _production_ bundle
+Run a clean production build with lint and test
 
-A server is launched with an HTML page to test the library manually: http://localhost:10001. \
-You should have the following rendering:
-<p align="center">
-    <img title="Grid" src="../../images/start_library_rendering.png">
-</p>
+`npm run all`
