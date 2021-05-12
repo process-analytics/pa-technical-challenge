@@ -4,10 +4,14 @@ import { Bingo } from '../src';
 function startBingoApp() {
   const container = document.getElementById('bingo-container');
   if (container) {
-    new Bingo().initializeGrid(container);
+    return new Bingo('bingo-container');
   } else {
     alert('Container must be provided');
   }
 }
 
-startBingoApp();
+const bingo = startBingoApp();
+
+document.getElementById('btn-new-grid').addEventListener('click', () => {
+  bingo.resetGrid();
+});
