@@ -2,7 +2,7 @@
 
 ## ♻️ Usage
 
-The production bundle is available in (./dist/main.bundle.js).
+The production bundle is available in [./dist/main.bundle.js](./dist/main.bundle.js).
 
 ### Initialize the library
 ```javascript
