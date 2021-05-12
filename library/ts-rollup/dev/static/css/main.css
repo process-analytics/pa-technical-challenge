@@ -1,6 +1,39 @@
+.flex-column-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.flex-column-container > div {
+    margin-top: 75px;
+}
+
 .info-centered {
     margin: 0 auto;
     width: 100%;
     text-align: center;
     font-family: monospace;
+}
+
+#controls-panel {
+    margin-left: 50px;
+}
+
+#bingo-container {
+    margin-top: 20px;
+    margin-left: 50px;
+    width: calc(100% - 100px);
+    overflow: hidden;
+}
+
+.button {
+    border-radius: 4px;
+    padding: 5px;
+    background-color: LightGreen;
+    color: #121e12;
+    font-size: small;
+}
+
+label {
+    font-size: 0.65em;
 }
