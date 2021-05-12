@@ -53,13 +53,6 @@ To see what it's already configured, go to the readme of each environment:
 #### What to do
 If it's necessary (because the exercise is too long), no need to implement all the rules (management of duplicates for random numbers, all winning combinations). Make it as simple as possible.
 
-- Add a new api method that generates & displays a new grid with random numbers on each square. \
-  It should be called with: `<library object>.generateNewGrid(htmlContainerWhereDisplayTheGrid);` \
-  The result should be something like this:
-  <p align="center">
-    <img title="Grid" src="images/grid.png">
-  </p>
-  
 - Add a new api method that adds a new token on a square. \
   It should be called with: `<library object>.addNewToken(“23”);` \
   The result should be something like this:
