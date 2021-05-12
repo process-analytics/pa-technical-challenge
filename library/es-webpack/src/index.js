@@ -8,7 +8,9 @@ const rowHeight = 100;
 const columnNumber = 5;
 const rowNumber = 5;
 
+// eslint-disable-next-line no-undef
 if (process.env.NODE_ENV !== 'production') {
+  // eslint-disable-next-line no-console
   console.log('Looks like we are in development mode!');
 }
 
