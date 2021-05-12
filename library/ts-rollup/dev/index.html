@@ -12,8 +12,13 @@
 
 <section class="flex-column-container">
     <div>
-        <div id="controls-panel">
+        <div id="controls-panel" class="flex-row-container">
             <input id="btn-new-grid" type="button" title="Generate new Grid" value="New Grid" class="button"/>
+
+            <div class="flex-column-container">
+                <label id="background" for="field-update-bckgd">Update the background of this square</label>
+                <input id="field-update-bckgd" type="text" maxLength="3" placeholder="put square number"/>
+            </div>
         </div>
 
         <!-- container used to display the BINGO -->
