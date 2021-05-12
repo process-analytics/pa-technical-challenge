@@ -37,12 +37,11 @@ export class BingoGraph extends mxgraph.mxGraph {
         parent,
         null,
         'Welcome to the BINGO!',
-        0.5,
-        0.5,
-        1500,
-        300,
-        null,
-        true,
+        0,
+        0,
+        this.container.clientWidth,
+        this.container.clientHeight,
+        'strokeOpacity=0',
       );
     } finally {
       // Updates the display
