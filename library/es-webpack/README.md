@@ -22,6 +22,25 @@ The result should be something like this:
     <img title="Grid" src="../../images/grid.png">
   </p>
 
+### Update the background color of a square, without redrawing all the grid
+```javascript
+    bingo.updateBackgroundColor('36', 'Pink');
+```
+The result should be something like this:
+  <p align="center">
+    <img title="Grid" src="../../images/background-color.png">
+  </p>
+
+### Register a handler on the grid
+```javascript
+    bingo.registerHandler(cell => {
+        alert(`You click on square ${cell.value}`);
+    });
+```
+
+This API could be useful for the implementation of the demonstrators. \
+The current handler parameter may not be enough or the wrong one. You are free to adapt it.
+
 ## Technical part
 
 The project is configured with Jest for the tests, Playwright & Jest-image-snapshot for the visual tests, ESLint for the code formatting.
@@ -43,7 +62,6 @@ A new tab is automatically open in the browser with the url http://localhost:808
 
 ![Grid](../../images/start_library_rendering.png)
 
-
 #### Format the code
 `npm run lint`
 
@@ -51,7 +69,7 @@ A new tab is automatically open in the browser with the url http://localhost:808
 `npm run clean`
 
 #### Launch tests
-##### All tests 
+##### All tests
 `npm run test`
 
 ##### Unit tests

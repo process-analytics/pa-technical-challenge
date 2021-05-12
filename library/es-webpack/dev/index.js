@@ -12,6 +12,19 @@ function startBingoApp() {
 
 const bingo = startBingoApp();
 
+// reset grid
 document.getElementById('btn-new-grid').addEventListener('click', () => {
   bingo.resetGrid();
+});
+
+// update background
+const updateBackground = document.getElementById('field-update-bckgd');
+updateBackground.onchange = () => {
+  bingo.updateBackgroundColor(updateBackground.value, 'Pink');
+  updateBackground.value = ''; // reset
+};
+
+// register handler on grid
+bingo.registerHandler(cell => {
+  alert(`You click on square ${cell.value}`);
 });
