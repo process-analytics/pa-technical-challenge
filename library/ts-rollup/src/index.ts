@@ -1,5 +1,4 @@
 import { BingoGraph } from './graph';
-import { mxCell } from 'mxgraph';
 
 const titleHeight = 70;
 
@@ -35,47 +34,44 @@ export class Bingo {
         width,
         height,
       );
-      this.initializeTitle(grid);
-      this.initializeNumbers(grid);
-    } finally {
-      // Updates the display
-      this.graph.getModel().endUpdate();
-    }
-  }
 
-  private initializeTitle(grid: mxCell): void {
-    const title = 'BINGO';
-
-    // display the title on first row
-    for (let columnsCount = 0; columnsCount < columnNumber; columnsCount++) {
-      const label = title.charAt(columnsCount);
-      this.graph.insertVertex(
-        grid,
-        null,
-        label,
-        columnsCount * columnWidth,
-        0,
-        columnWidth,
-        titleHeight,
-        'fontColor=Snow;fontSize=36;fillColor=SlateGray',
-      );
-    }
-  }
-
-  private initializeNumbers(grid: mxCell): void {
-    // display the rest of the grid with numbers
-    for (let rowsCount = 0; rowsCount < rowNumber; rowsCount++) {
+      // display the title on first row
+      const title = 'BINGO';
       for (let columnsCount = 0; columnsCount < columnNumber; columnsCount++) {
+        const label = title.charAt(columnsCount);
         this.graph.insertVertex(
           grid,
           null,
-          `${getRandomInteger()}`,
+          label,
           columnsCount * columnWidth,
-          (rowsCount + 1) * rowHeight - (rowHeight - titleHeight),
+          0,
           columnWidth,
-          rowHeight,
+          titleHeight,
+          'fontColor=Snow;fontSize=36;fillColor=SlateGray',
         );
       }
+
+      // display the rest of the grid with numbers
+      for (let rowsCount = 0; rowsCount < rowNumber; rowsCount++) {
+        for (
+          let columnsCount = 0;
+          columnsCount < columnNumber;
+          columnsCount++
+        ) {
+          this.graph.insertVertex(
+            grid,
+            null,
+            `${getRandomInteger()}`,
+            columnsCount * columnWidth,
+            (rowsCount + 1) * rowHeight - (rowHeight - titleHeight),
+            columnWidth,
+            rowHeight,
+          );
+        }
+      }
+    } finally {
+      // Updates the display
+      this.graph.getModel().endUpdate();
     }
   }
 }
