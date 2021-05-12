@@ -9,6 +9,10 @@ You work on a new Open Source project as a frontend developer. This project is d
 
 Your mission, if you accept it, is to create a new library, and a demonstrator of this library to permit the Bingo players to display a new grid with random numbers, add a new token on a square, and change the background & add an interaction when a row/column is completed.
 
+As a member of the team, we let you decide the level of completion you think is necessary to promote the library.
+
+✨ Please share your code via GitHub.
+
 ## Bingo rules
 ### Presentation of the game
 Bingo is a game of chance played with 90 balls, numbered from 1 to 90, where the drawn numbers are announced one after the other.  \
@@ -114,8 +118,3 @@ Use the previous library to demonstrate the rendering of all its functionalities
   
 **Bonus**:
 - Add an interaction: When the user clicks on a square and the diagonal is completed, the color of the background of the whole diagonal must be changed.
-
-As a member of the team, we let you decide the level of completion you think is necessary to promote the library.
-
-
-✨ Please share your code via GitHub.
