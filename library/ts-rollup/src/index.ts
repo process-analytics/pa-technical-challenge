@@ -1,4 +1,5 @@
 import { BingoGraph } from './graph';
+import { mxgraph } from './initializer';
 
 const titleHeight = 70;
 
@@ -58,10 +59,11 @@ export class Bingo {
           columnsCount < columnNumber;
           columnsCount++
         ) {
+          const randomInteger = getRandomInteger();
           this.graph.insertVertex(
             grid,
-            null,
-            `${getRandomInteger()}`,
+            convertLabelToCellId(randomInteger),
+            `${randomInteger}`,
             columnsCount * columnWidth,
             (rowsCount + 1) * rowHeight - (rowHeight - titleHeight),
             columnWidth,
@@ -74,11 +76,26 @@ export class Bingo {
       this.graph.getModel().endUpdate();
     }
   }
+
+  public updateBackgroundColor(label: string, fillColor: string): void {
+    const cell = this.graph.getModel().getCell(convertLabelToCellId(label));
+    if (!cell) {
+      return;
+    }
+
+    const style = cell.getStyle();
+    const newStyle = `${style};${mxgraph.mxConstants.STYLE_FILLCOLOR}=${fillColor}`;
+    this.graph.getModel().setStyle(cell, newStyle);
+  }
 }
 
 // naive implementation, doesn't prevent duplicates in grid
-export function getRandomInteger(): number {
+function getRandomInteger(): number {
   const min = 1;
   const max = 90;
   return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function convertLabelToCellId(label: string | number): string {
+  return `number_${label}`;
 }

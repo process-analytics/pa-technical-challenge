@@ -11,6 +11,16 @@ function startBingoApp(): Bingo {
 
 const bingo = startBingoApp();
 
+// reset grid
 document.getElementById('btn-new-grid').addEventListener('click', () => {
   bingo.resetGrid();
 });
+
+// update background
+const updateBackground = document.getElementById(
+  'field-update-bckgd',
+) as HTMLInputElement;
+updateBackground.onchange = () => {
+  bingo.updateBackgroundColor(updateBackground.value, 'Pink');
+  updateBackground.value = ''; // reset
+};
