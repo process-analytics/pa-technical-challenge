@@ -1,6 +1,4 @@
 // TODO Use as template for your e2e test
-import { MatchImageSnapshotOptions } from 'jest-image-snapshot';
-
 describe('test something', () => {
   it('should initialize grid when...', async () => {
     const response = await page.goto(`http://localhost:10002`);
