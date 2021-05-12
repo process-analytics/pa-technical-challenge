@@ -1,7 +1,7 @@
 # Technical Challenge to apply at Bonitasoft
 
 You can find, in this repository, in different folders, the same challenge with different environments.
-This challenge enables the Process Analytics team working at Bonitasoft to find a new collaborator to increase this team.
+This challenge is part of the recruitment process used at Bonitasoft to hire new member of the Process Analytics team.
 
 ## Story
 
