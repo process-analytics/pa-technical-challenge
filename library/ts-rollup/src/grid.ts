@@ -45,7 +45,7 @@ export class Grid {
     }
   }
 
-  private initializeTitle(grid: mxCell) {
+  private initializeTitle(grid: mxCell): void {
     // display the title on first row
     for (let columnsCount = 0; columnsCount < columnNumber; columnsCount++) {
       const label = title.charAt(columnsCount);
@@ -61,7 +61,8 @@ export class Grid {
       );
     }
   }
-  private initializeNumbers(grid: mxCell) {
+
+  private initializeNumbers(grid: mxCell): void {
     // display the rest of the grid with numbers
     for (let rowsCount = 0; rowsCount < rowNumber; rowsCount++) {
       for (let columnsCount = 0; columnsCount < columnNumber; columnsCount++) {
