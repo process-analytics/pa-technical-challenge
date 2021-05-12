@@ -25,7 +25,7 @@ updateBackground.onchange = () => {
   updateBackground.value = ''; // reset
 };
 
-// add handler on grid
-bingo.addHandler(cell => {
+// register handler on grid
+bingo.registerHandler(cell => {
   alert(`You click on square ${cell.value}`);
 });

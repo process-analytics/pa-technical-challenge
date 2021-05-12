@@ -89,7 +89,7 @@ export class Bingo {
     this.graph.getModel().setStyle(cell, newStyle);
   }
 
-  addHandler(handler: (cell: mxCell) => void): void {
+  registerHandler(handler: (cell: mxCell) => void): void {
     this.graph.addListener(mxgraph.mxEvent.CLICK, (sender, event) => {
       const cell = event.getProperty('cell'); // cell may be null
       if (cell == null) {

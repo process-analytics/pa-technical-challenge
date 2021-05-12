@@ -61,9 +61,6 @@ If it's necessary (because the exercise is too long), no need to implement all t
   <p align="center">
     <img title="Token" src="images/token.png">
   </p>
-
-- Add a new api method that adds a handler on click on square. \
-  It should be called with: `<library object>.addHandler(squareLabel, (event) => {....});`
   
 - Add one or several new api methods that let know if a line or a column is completed. The number of the squares that are
 in the row or in the column should be returned for a latter use. \
