@@ -1,13 +1,19 @@
 # Technical Challenge to apply at Bonitasoft
 
 You can find, in this repository, in different folders, the same challenge with different environments.
-This challenge enables the Process Analytics team working at Bonitasoft to find a new collaborator to increase this team.
+This challenge is part of the recruitment process used at Bonitasoft to hire new member of the Process Analytics team.
 
 ## Story
 
 You work on a new Open Source project as a frontend developer. This project is destined to the Bingo players.
 
 Your mission, if you accept it, is to create a new library, and a demonstrator of this library to permit the Bingo players to display a new grid with random numbers, add a new token on a square, and change the background & add an interaction when a row/column is completed.
+
+As a member of the team, we let you decide the level of completion you think is necessary to promote the library.
+
+✨ Please share your code via GitHub:
+- create a **private** repository from the [template](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) providing by the `pa-technical-challenge` repository.
+- let the Process Analytics core team (@aibcmars @csouchet @tbouffard) access to it when you have completed the challenge
 
 ## Bingo rules
 ### Presentation of the game
@@ -114,8 +120,3 @@ Use the previous library to demonstrate the rendering of all its functionalities
   
 **Bonus**:
 - Add an interaction: When the user clicks on a square and the diagonal is completed, the color of the background of the whole diagonal must be changed.
-
-As a member of the team, we let you decide the level of completion you think is necessary to promote the library.
-
-
-✨ Please share your code via GitHub.
