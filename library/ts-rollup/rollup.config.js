@@ -1,13 +1,18 @@
 import serve from 'rollup-plugin-serve';
 import livereload from 'rollup-plugin-livereload';
 import copyWatch from 'rollup-plugin-copy-watch';
-
 import typescript from 'rollup-plugin-typescript2';
 import commonjs from 'rollup-plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
+import parseArgs from 'minimist';
 import pkg from './package.json';
 
+// parse command line arguments
+const argv = parseArgs(process.argv.slice(2)); // start with 'node rollup' so drop them
+// for the 'config-xxx' syntax, see https://github.com/rollup/rollup/issues/1662#issuecomment-395382741
+const serverPort = argv['config-server-port'] || 10001;
 const watchMode = process.env.watchMode;
+
 let input = 'src/index.ts';
 let outputFile = pkg.module;
 
@@ -36,7 +41,7 @@ if (watchMode) {
     }),
   );
 
-  plugins.push(serve({ contentBase: 'build/dev', port: 10001 }));
+  plugins.push(serve({ contentBase: 'build/dev', port: serverPort }));
   plugins.push(livereload({ watch: 'build/dev', verbose: true }));
 }
 
