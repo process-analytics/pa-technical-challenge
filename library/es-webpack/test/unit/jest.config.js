@@ -3,9 +3,9 @@ module.exports = {
   roots: ['./test/unit', './src'],
   testMatch: ['**/?(*.)+(spec|test).js'],
   testPathIgnorePatterns: ['/node_modules/', 'dist', 'src'],
-  transform: {
-    '^.+\\.ts?$': 'ts-jest',
-  },
+  // transform: {
+  //   '^.+\\.ts?$': 'ts-jest',
+  // },
   collectCoverageFrom: ['**/*.{js}'],
   coveragePathIgnorePatterns: [
     '/node_modules/',
