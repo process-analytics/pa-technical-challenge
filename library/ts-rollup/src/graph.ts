@@ -11,9 +11,8 @@ export class BingoGraph extends mxgraph.mxGraph {
     this.setCellsLocked(true);
     this.setCellsSelectable(false);
 
-    // taken from bpmn-visualization
-    // Disable folding for container mxCell (pool, lane, sub process, call activity) because we don't need it.
-    // This also prevents requesting unavailable images (see #185) as we don't override BpmnMxGraph folding default images.
+    // Disable folding for container mxCell because we don't need it.
+    // This also prevents requesting unavailable images (see #185) as we don't override MxGraph folding default images.
     // like http 404 http://localhost:8080/images/expanded.gif (mxgraph default)
     this.foldingEnabled = false;
 
