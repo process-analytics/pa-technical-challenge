@@ -7,7 +7,23 @@ This challenge enables the Process Analytics team working at Bonitasoft to find 
 
 You work on a new Open Source project as a frontend developer. This project is destined to the Bingo players.
 
-Your mission, if you accept it, is to create a new library and a demonstrator of this library to permit the Bingo players to display a new grid with random numbers, add a new token on a square, and change the background & add an interaction when a row/column is completed.
+Your mission, if you accept it, is to create a new library, and a demonstrator of this library to permit the Bingo players to display a new grid with random numbers, add a new token on a square, and change the background & add an interaction when a row/column is completed.
+
+## Bingo rules
+### Presentation of the game
+Bingo is a game of chance played with 90 balls, numbered from 1 to 90, where the drawn numbers are announced one after the other.  \
+To participate, a player must have at least 1 game card. Each player matches numbers printed in different arrangements on cards with the numbers the game host (caller) draws at random, marking the selected numbers with tiles.  \
+When a player finds the selected numbers are arranged on their card in a row, they call out "**Bingo!**" to alert all participants to a winning card, which prompts the game host (or an associate assisting the host) to examine the card for verification of the win.  \
+Players compete against one another to be the first to have a winning arrangement for the prize or jackpot.  \
+After a winner is declared, the players clear their number cards of the tiles, and the game host begins a new round of play.
+
+### Bingo cards
+Each Bingo cards contain 25 squares arranged in 5 vertical columns and 5 side to side rows. Each space in the grid contains a different random number from 1 to 90. \
+The five columns of the card are labeled '**B**', '**I**', '**N**', '**G**', and '**O**' from left to right.  \
+The range of printed numbers that can appear on the card is normally restricted by column, like [this](https://generateurbingo.com/pdf/171031-generateurbingo-numeros-1-90.pdf).
+
+### Winning combinations
+A player wins by completing a row, column, or diagonal.
 
 ## Technical Overview
 There are 2 parts:
@@ -29,6 +45,8 @@ To see what it's already configured, go to the readme of each environment:
 - [ES + Webpack](./library/es-webpack/README.md)
 
 #### What to do
+If it's necessary (because the exercise is too long), no need to implement all the rules (management of duplicates for random numbers, all winning combinations). Make it as simple as possible.
+
 - Add a new api method that generates & displays a new grid with random numbers on each square. \
   It should be called with: `<library object>.generateNewGrid(htmlContainerWhereDisplayTheGrid);` \
   The result should be something like this:
@@ -86,13 +104,16 @@ It can be :
 Use the previous library to demonstrate the rendering of all its functionalities.
 
 - Display a new grid with random numbers on each square
-- Add an interaction: When the user clicks on a square, a new jeton must appear on it.
+- Add an interaction: When the user clicks on a square, a new token must appear on it.
 - Add an interaction: When the user clicks on a square and the row is completed, the color of the background of the whole row must be changed.
 - Add an interaction: When the user clicks on a square and the column is completed, the color of the background of the whole column must be changed.
+- When the user wins: implement whatever you want to let him/her know he has just won (congratulations are welcome).
   <p align="center">
     <img title="Column" src="images/column.png">
   </p>
-- Add an interaction: When the user clicks on a square and the whole grid is completed, add the interaction that you want to congratulate the user.
+  
+**Bonus**:
+- Add an interaction: When the user clicks on a square and the diagonal is completed, the color of the background of the whole diagonal must be changed.
 
 As a member of the team, we let you decide the level of completion you think is necessary to promote the library.
 
