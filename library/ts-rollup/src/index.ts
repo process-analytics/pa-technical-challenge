@@ -1,5 +1,6 @@
 import { BingoGraph } from './graph';
 import { mxgraph } from './initializer';
+import { mxCell } from 'mxgraph';
 
 const titleHeight = 70;
 
@@ -86,6 +87,20 @@ export class Bingo {
     const style = cell.getStyle();
     const newStyle = `${style};${mxgraph.mxConstants.STYLE_FILLCOLOR}=${fillColor}`;
     this.graph.getModel().setStyle(cell, newStyle);
+  }
+
+  addHandler(handler: (cell: mxCell) => void): void {
+    this.graph.addListener(mxgraph.mxEvent.CLICK, (sender, event) => {
+      const cell = event.getProperty('cell'); // cell may be null
+      if (cell == null) {
+        return;
+      }
+
+      if (handler) {
+        handler(cell);
+        event.consume();
+      }
+    });
   }
 }
 
