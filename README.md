@@ -113,8 +113,7 @@ Use the previous library to demonstrate the rendering of all its functionalities
   </p>
   
 **Bonus**:
-- Add an interaction: When the user clicks on a square and the diagonal is completed, the color of the background of the whole diagonal must be changed. \
-  Add the interaction that you want to congratulate the user.
+- Add an interaction: When the user clicks on a square and the diagonal is completed, the color of the background of the whole diagonal must be changed.
 
 As a member of the team, we let you decide the level of completion you think is necessary to promote the library.
 
