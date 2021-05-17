@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "outDir": "./build/lib",
-    "target": "ESNext",
-    "module": "ESNext",
+    "target": "ES2018",
+    "module": "ES2015",
     "lib": [
       "ESNext",
       "dom"
