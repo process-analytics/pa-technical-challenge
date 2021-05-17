@@ -1,13 +1,19 @@
 # Technical Challenge to apply at Bonitasoft
 
 You can find, in this repository, in different folders, the same challenge with different environments.
-This challenge enables the Process Analytics team working at Bonitasoft to find a new collaborator to increase this team.
+This challenge is part of the recruitment process used at Bonitasoft to hire new member of the Process Analytics team.
 
 ## Story
 
 You work on a new Open Source project as a frontend developer. This project is destined to the Bingo players.
 
 Your mission, if you accept it, is to create a new library, and a demonstrator of this library to permit the Bingo players to display a new grid with random numbers, add a new token on a square, and change the background & add an interaction when a row/column is completed.
+
+As a member of the team, we let you decide the level of completion you think is necessary to promote the library.
+
+✨ Please share your code via GitHub:
+- create a **private** repository from the [template](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) providing by the `pa-technical-challenge` repository.
+- let the Process Analytics core team (@aibcmars @csouchet @tbouffard) access to it when you have completed the challenge
 
 ## Bingo rules
 ### Presentation of the game
@@ -44,43 +50,22 @@ To see what it's already configured, go to the readme of each environment:
 - [TypeScript + Rollup](./library/ts-rollup/README.md)
 - [ES + Webpack](./library/es-webpack/README.md)
 
+**Note**: The environments have been tested with NodeJS 12 and npm 6.
+
 #### What to do
 If it's necessary (because the exercise is too long), no need to implement all the rules (management of duplicates for random numbers, all winning combinations). Make it as simple as possible.
 
-- Add a new api method that generates & displays a new grid with random numbers on each square. \
-  It should be called with: `<library object>.generateNewGrid(htmlContainerWhereDisplayTheGrid);` \
-  The result should be something like this:
-  <p align="center">
-    <img title="Grid" src="images/grid.png">
-  </p>
-  
 - Add a new api method that adds a new token on a square. \
   It should be called with: `<library object>.addNewToken(“23”);` \
   The result should be something like this:
   <p align="center">
     <img title="Token" src="images/token.png">
   </p>
-
-- Add a new api method that updates the background color of a square, without redrawing all the grid. \
-  It should be called with: `<library object>.updateBackgroundColor(“16”, “Pink”);` \
-  The result should be something like this:
-  <p align="center">
-    <img title="Background color" src="images/background-color.png">
-  </p>
-
-- Add a new api method that adds a handler on click on square. \
-  It should be called with: `<library object>.addHandler(squareLabel, (event) => {....});`
   
-- Add a new api method that returns the label of the squares with no token on the same row of a specific square. \
-  It should be called with: `<library object>.getLabelsWithNoTokenOnSameRow(squareLabel);` \
-  The result should be something like this: `[5, 8, 3]` or `[]`
-
-- Add a new api method that returns the label of the squares with no token on the same column of a specific square. \
-  It should be called with: `<library object>.getLabelsWithNoTokenOnSameColumn(squareLabel);` \
-  The result should be something like this: `[7, 2, 4]` or `[]`
+- Add one or several new api methods that let know if a line or a column is completed. The number of the squares that are
+in the row or in the column should be returned for a latter use. \
+  For more details about how the api will be used, see the Demonstrator request below.
   
-- **Bonus**: \
-  At the initialization of the library, load the MxGraph model dynamically, like done in this [example](https://jgraph.github.io/mxgraph/javascript/examples/dynamicloading.html).
 
 #### References
 - npm package of MxGraph: https://www.npmjs.com/package/mxgraph
@@ -93,7 +78,7 @@ If it's necessary (because the exercise is too long), no need to implement all t
 #### Requirements
 We initialize the folder [demonstrator](./demonstrator), but it's empty.
 
-There is no specific requirement for the demonstrator. \
+There is no specific requirement nor technical restriction for the demonstrator. \
 It can be :
 - a HTML page
 - a mini application
@@ -114,8 +99,3 @@ Use the previous library to demonstrate the rendering of all its functionalities
   
 **Bonus**:
 - Add an interaction: When the user clicks on a square and the diagonal is completed, the color of the background of the whole diagonal must be changed.
-
-As a member of the team, we let you decide the level of completion you think is necessary to promote the library.
-
-
-✨ Please share your code via GitHub.

@@ -1,12 +1,31 @@
 import { Bingo } from '../src';
 
-function startBingoApp(): void {
+function startBingoApp(): Bingo {
   const container = document.getElementById('bingo-container');
   if (container) {
-    new Bingo('bingo-container').initializeGrid();
+    return new Bingo('bingo-container');
   } else {
     alert('Container must be provided');
   }
 }
 
-startBingoApp();
+const bingo = startBingoApp();
+
+// reset grid
+document.getElementById('btn-new-grid').addEventListener('click', () => {
+  bingo.resetGrid();
+});
+
+// update background
+const updateBackground = document.getElementById(
+  'field-update-bckgd',
+) as HTMLInputElement;
+updateBackground.onchange = () => {
+  bingo.updateBackgroundColor(updateBackground.value, 'Pink');
+  updateBackground.value = ''; // reset
+};
+
+// register handler on grid
+bingo.registerHandler(cell => {
+  alert(`You click on square ${cell.value}`);
+});
