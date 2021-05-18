@@ -79,16 +79,10 @@ You should have the following rendering:
 ##### Unit tests + Coverage
 `npm run test:unit:coverage`
 
-##### E2E tests
-`npm run test:e2e`
-
-##### E2E tests + Coverage
-`npm run test:e2e:coverage`
-
 #### All the previous commands
 `npm run all`
 
 #### Build the _production_ bundle
 Run a clean production build with lint and test
 
-`npm run all`
+`npm run build`
