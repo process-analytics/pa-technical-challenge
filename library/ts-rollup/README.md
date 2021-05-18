@@ -79,12 +79,6 @@ You should have the following rendering:
 ##### Unit tests + Coverage
 `npm run test:unit:coverage`
 
-##### E2E tests
-`npm run test:e2e`
-
-##### E2E tests + Coverage
-`npm run test:e2e:coverage`
-
 #### All the previous commands
 `npm run all`
 
