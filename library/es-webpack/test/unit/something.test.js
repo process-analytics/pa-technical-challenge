@@ -9,7 +9,7 @@ beforeEach(() => {
 // TODO Use as template for your unit test
 describe('test something', () => {
   it('should initialize grid when...', () => {
-    bingo.initializeGrid();
+    bingo.resetGrid();
 
     expect(0).toEqual(0);
   });
