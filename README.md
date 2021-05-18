@@ -50,7 +50,9 @@ To see what it's already configured, go to the readme of each environment:
 - [TypeScript + Rollup](./library/ts-rollup/README.md)
 - [ES + Webpack](./library/es-webpack/README.md)
 
-**Note**: The environments have been tested with NodeJS 12 and npm 6.
+**Note**: The environments have been tested with 
+- NodeJS 12 and 14, npm 6
+- IDE: IntelliJ (WebStorm) 2021.1.1 and Visual Studio Code 1.56
 
 #### What to do
 If it's necessary (because the exercise is too long), no need to implement all the rules (management of duplicates for random numbers, all winning combinations). Make it as simple as possible.
