@@ -85,4 +85,4 @@ You should have the following rendering:
 #### Build the _production_ bundle
 Run a clean production build with lint and test
 
-`npm run all`
+`npm run build`
