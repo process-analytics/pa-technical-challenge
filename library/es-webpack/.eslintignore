@@ -7,6 +7,4 @@ dist/
 node_modules/
 .eslintrc.js
 webpack.*.js
-test/e2e/jest-playwright.config.js
-test/e2e/jest.config.js
 test/unit/jest.config.js
