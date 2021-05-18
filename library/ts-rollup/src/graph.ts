@@ -38,8 +38,8 @@ export class BingoGraph extends mxgraph.mxGraph {
         'Welcome to the BINGO!',
         0,
         0,
-        this.container.clientWidth,
-        this.container.clientHeight,
+        this.container ? this.container.clientWidth : 500,
+        this.container ? this.container.clientHeight : 500,
         'strokeOpacity=0',
       );
     } finally {
