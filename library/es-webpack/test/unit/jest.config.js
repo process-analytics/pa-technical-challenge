@@ -1,10 +1,11 @@
 module.exports = {
+  verbose: true,
   rootDir: '../..',
   roots: ['./test/unit', './src'],
-  testMatch: ['**/?(*.)+(spec|test).[t]s'],
+  testMatch: ['**/?(*.)+(spec|test).js'],
   testPathIgnorePatterns: ['/node_modules/', 'dist', 'src'],
   transform: {
-    '^.+\\.ts?$': 'ts-jest',
+    '^.+\\.(js|jsx)$': 'babel-jest',
   },
   collectCoverageFrom: ['**/*.{ts,js}'],
   coveragePathIgnorePatterns: [
