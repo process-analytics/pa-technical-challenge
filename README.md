@@ -1,5 +1,10 @@
 # Technical Challenge to apply at Bonitasoft
 
+| Archived on 2023-09-11 | We no longer use this repository during the recruitment process. |
+| -------- | -------- |
+
+
+
 You can find, in this repository, in different folders, the same challenge with different environments.
 This challenge is part of the recruitment process used at Bonitasoft to hire new member of the Process Analytics team.
 
